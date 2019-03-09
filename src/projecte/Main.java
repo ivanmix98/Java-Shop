@@ -1,21 +1,37 @@
 package projecte;
 
+//USO DE LAMBDAS
+interface Treballadors {
+    int quantitat();
+}
+//USO DE LAMBDAS
+interface TotalTreballadors {
+    int quantitat(int g, int e);
+}
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Bossa<Xocolata> bolsa= new Bossa<Xocolata>(2);
-        Xocolata c= new Xocolata("milka");
-        Xocolata c1= new Xocolata("milka");
-        Xocolata c2= new Xocolata("ferrero");
+        Caixa<String , Integer> caixa= new Caixa<String, Integer>();
 
-        bolsa.add(c);
-        bolsa.add(c1);
-        bolsa.add(c2);
+        caixa.add(new String("Teclat logitech"), new Integer(25));
 
-        for (Xocolata chocolatina:bolsa) {
+        System.out.printf("Producte: %s\n", caixa.getObjeto());
+        System.out.printf("Preu: %s\n", caixa.getObjeto2());
 
-            System.out.println(chocolatina.getMarca());
-        }
+
+        //USO DE LAMBDAS
+        Treballadors gerents;
+        gerents=()->2;
+        System.out.println("Gerents actuals: "+gerents.quantitat());
+
+        Treballadors empleats;
+        empleats=()->5;
+        System.out.println("Empleats actuals: "+empleats.quantitat());
+
+        TotalTreballadors totals= (g,e)-> (g+e);
+        System.out.println("Treballadors totals: "+totals.quantitat(2,5));
+
     }
 }
