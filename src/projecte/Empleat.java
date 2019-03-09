@@ -2,9 +2,6 @@ package projecte;
 
 public class Empleat extends Treballador {
 
-
-
-
     public Empleat (String nom, String cognom, String DNI, String adreca, int num, double salari) {
         super (nom, cognom, DNI, adreca, num, salari);
         ;
@@ -22,8 +19,7 @@ public class Empleat extends Treballador {
 
     @Override
     public boolean equals(Object obj) {
-        Empleat e= (Empleat)obj;
-
+        Empleat e = (Empleat)obj;
         return e.getNom().equals(this.getNom());
     }
 
@@ -35,5 +31,4 @@ public class Empleat extends Treballador {
     {
         System.out.println("Adeu! Que vagi bé!");
     }
-
 }

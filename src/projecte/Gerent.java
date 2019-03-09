@@ -23,11 +23,9 @@ public class Gerent extends Treballador {
     }
 
     @Override
-
     public String treballar(){
         return "Estic treballant!!!";
     }
-
     public void saludar()
     {
         System.out.println("Hola!");
