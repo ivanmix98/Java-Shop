@@ -14,12 +14,13 @@ public class Main {
     public static void main(String[] args) {
 
         Caixa<String , Integer> caixa= new Caixa<String, Integer>();
-
         caixa.add(new String("Teclat logitech"), new Integer(25));
 
         System.out.printf("Producte: %s\n", caixa.getObjeto());
         System.out.printf("Preu: %s\n", caixa.getObjeto2());
 
+        Producte p1 = new Portatil(1,"test1","portatil",12345);
+        Producte p2 = new Sobretaula(2,"test2", "Sobretaula", 67890);
 
         //USO DE LAMBDAS
         Treballadors gerents;
@@ -32,6 +33,7 @@ public class Main {
 
         TotalTreballadors totals= (g,e)-> (g+e);
         System.out.println("Treballadors totals: "+totals.quantitat(2,5));
+
 
     }
 }
