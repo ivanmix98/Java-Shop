@@ -1,4 +1,5 @@
 package projecte;
+import java.util.*;
 
 //USO DE LAMBDAS
 interface Treballadors {
@@ -12,7 +13,7 @@ interface TotalTreballadors {
 public class Main {
 
     public static void main(String[] args) {
-
+        //us de classe generica
         Caixa<String , Integer> caixa= new Caixa<String, Integer>();
         caixa.add(new String("Teclat logitech"), new Integer(25));
 
@@ -44,6 +45,46 @@ public class Main {
         Televisio.Pantalla objetoInterno = objetoExterno.new Pantalla();
         objetoInterno.mostrarDimensio();
 
-        //
+        //colecció llistes
+        List clients =new ArrayList();
+        clients.add("Pepe");
+        clients.add("Juan");
+        clients.add("Anna");
+        System.out.println("--Llista clients--");
+        Iterator iterador = clients.iterator();
+        while (iterador.hasNext()){
+            String element = (String) iterador.next();
+            System.out.print(element+" ");
+        }
+
+        //colecció Piles
+        Stack<Producte> pila = new Stack<Producte>();
+
+        Producte pila1 = new Portatil(1,"LG","portatil",12345);
+        Producte pila2 = new Sobretaula(2,"ASUS", "Sobretaula", 67890);
+
+        pila.push(pila1); // adiciona un libro a la pila
+        pila.push(pila2);
+        System.out.println("\n--Llista marques venudes avui--");
+        while (!pila.isEmpty()){
+            System.out.println(pila.pop().getNom());
+        }
+        //colecció Cues
+
+        Queue<Producte> cua = new LinkedList<Producte>(){};
+        cua.add(new Movil(1,"Samsung", 5));
+        cua.add(new Movil(2,"iPhone", 3));
+        cua.add(new Movil(3,"Huawei", 4));
+        cua.add(new Movil(4,"Xiaomi", 4));
+
+        System.out.println("--Llista movils venuts avui--");
+        while (!cua.isEmpty()){
+            Producte a = cua.remove();
+            System.out.println(a.getId()+ " "+ a.getNom());
+        }
+
+
+
+
     }
 }

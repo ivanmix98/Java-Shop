@@ -31,7 +31,7 @@ public class XmlDOM {
 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    System.out.println("Stock simbol: " + obtenirContingut("simbol", element));
+                    System.out.println("Stock Marca: " + obtenirContingut("simbol", element));
                     System.out.println("Stock preu: " + obtenirContingut("preu", element));
                     System.out.println("Stock quantitat: " + obtenirContingut("quantitat", element));
                 }

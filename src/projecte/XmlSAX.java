@@ -58,7 +58,7 @@ public class XmlSAX {
                 public void characters(char ch[], int start, int length) throws SAXException {
 
                     if (bSimbol) {
-                        System.out.println("Simbol: " + new String(ch, start, length));
+                        System.out.println("Marca: " + new String(ch, start, length));
                         bSimbol = false;
                     }
                     if (bPreu) {

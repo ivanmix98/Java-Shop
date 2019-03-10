@@ -8,6 +8,8 @@ public class Movil extends Producte {
         this.mesura = mesura;
     }
 
+
+
     public int getMesura() {
         return mesura;
     }
