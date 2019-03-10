@@ -3,19 +3,19 @@ package projecte;
 public class Televisio extends Producte {
     private int quantitat;
     private int preu;
+     int resolucio = 1080;
 
     public class Pantalla {
-        int pulzada;
-
-        public Pantalla(int pulzada){
-            this.pulzada = pulzada;
+        public void mostrarDimensio(){
+            System.out.println("qualitat de la pantalla: "+ resolucio+"p" );
         }
     }
-    public Televisio ( int id, String nom, int quantitat, int preu,  int pulzada){
+
+    public Televisio ( int id, String nom, int quantitat, int preu){
         super(id, nom);
         this.quantitat = quantitat;
         this.preu = preu;
-        //this.pulzada = pulzada; no se com sagafava
+
     }
 
     public int getQuantitat() {
@@ -33,4 +33,6 @@ public class Televisio extends Producte {
     public void setPreu(int preu) {
         this.preu = preu;
     }
+
+
 }

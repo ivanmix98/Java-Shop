@@ -30,8 +30,7 @@ public class XmlSAX {
                 boolean bQuantitat = false;
 
                 @Override
-                public void startElement(String uri, String nomLocal, String nomElement,
-                                         Attributes atributs) throws SAXException {
+                public void startElement(String uri, String nomLocal, String nomElement, Attributes atributs) throws SAXException {
 
                     System.out.println("Inici d'element :" + nomElement);
 
@@ -49,8 +48,7 @@ public class XmlSAX {
                 }
 
                 @Override
-                public void endElement(String uri, String localName,
-                                       String nomElement) throws SAXException {
+                public void endElement(String uri, String localName, String nomElement) throws SAXException {
 
                     System.out.println("Final d'element :" + nomElement);
 

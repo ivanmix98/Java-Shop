@@ -4,10 +4,10 @@ import java.util.Calendar;
 
 
 public class Gerent extends Treballador {
-
+    private static int salaribase;
     public Gerent (String nom, String cognom, String DNI, String adreca, int num, double salari) {
         super (nom, cognom, DNI, adreca, num, salari);
-
+        this.salaribase = 1500;
     }
 
     public static void diadepago(){
@@ -35,4 +35,11 @@ public class Gerent extends Treballador {
         System.out.println("Adeu! Que vagi bé!");
     }
 
+    public static int getSalaribase() {
+        return salaribase;
+    }
+
+    public static void setSalaribase(int salaribase) {
+        Gerent.salaribase = salaribase;
+    }
 }
