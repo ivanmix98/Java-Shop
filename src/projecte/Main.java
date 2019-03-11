@@ -92,11 +92,22 @@ public class Main {
         conjunt.add(m);//no apareixen 2
         conjunt.add(o);
 
-        System.out.println("--Llista conjunts venuts avui--");
+        System.out.println("--Llista de movils defectuosos--");
         for(Iterator it = conjunt.iterator(); it.hasNext();){
             Producte x = (Producte)it.next();
             System.out.println(x.getId()+" "+ x.getNom());
         }
+
+        //Taules dispersio
+        System.out.println("--Filtratge dates devolucio--");
+        Producte s = new Movil(1,"Samsung", 5);
+        Producte t = new Movil(2,"Lg", 2);
+        Map taulaHash = new HashMap<Producte,String>();
+        taulaHash.put(s,"La data de devolució d'aquest dispositiu és: 02-03-2018 ");
+        taulaHash.put(t,"La data de devolució d'aquest dispositiu és: 12-07-2018");
+
+        String descripcio = (String) taulaHash.get(s);
+        System.out.println(descripcio);
 
     }// cerrar main
 
