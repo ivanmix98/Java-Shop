@@ -83,8 +83,21 @@ public class Main {
             System.out.println(a.getId()+ " "+ a.getNom());
         }
 
+        //colecció Conjunts
+        Producte m = new Movil(1,"Samsung", 5);
+        Producte o = new Movil(2,"Lg", 2);
 
+        HashSet<Producte> conjunt = new HashSet<Producte>();
+        conjunt.add(m);
+        conjunt.add(m);//no apareixen 2
+        conjunt.add(o);
 
+        System.out.println("--Llista conjunts venuts avui--");
+        for(Iterator it = conjunt.iterator(); it.hasNext();){
+            Producte x = (Producte)it.next();
+            System.out.println(x.getId()+" "+ x.getNom());
+        }
 
-    }
-}
+    }// cerrar main
+
+}// cerrar clase
