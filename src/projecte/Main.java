@@ -40,6 +40,7 @@ public class Main {
         Treballador g1 = new Gerent("arnau","elias","12345678X","calle novenoventa",11,1800);
         Treballador g2 = new Gerent("Ivan","fontclara","87654321W","calle falsa",123,1801);
         System.out.println("En el contracte el minim a cobrar es: "+((Gerent) g1).getSalaribase());
+        System.out.println("En el contracte el minim a cobrar es: "+((Gerent) g2).getSalaribase());
 
         //utilitzant classe interna
         Televisio objetoExterno = new Televisio(3,"pantalla1",2,500);
