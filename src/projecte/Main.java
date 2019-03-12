@@ -72,10 +72,10 @@ public class Main {
         //colecció Cues
 
         Queue<Producte> cua = new LinkedList<Producte>(){};
-        cua.add(new Movil(1,"Samsung", 5));
-        cua.add(new Movil(2,"iPhone", 3));
-        cua.add(new Movil(3,"Huawei", 4));
-        cua.add(new Movil(4,"Xiaomi", 4));
+        cua.add(new Movil(1,"Samsung", 5, "Pepe"));
+        cua.add(new Movil(2,"iPhone", 3, "Anna"));
+        cua.add(new Movil(3,"Huawei", 4, "Joan"));
+        cua.add(new Movil(4,"Xiaomi", 4, "Fizz"));
 
         System.out.println("--Llista movils venuts avui--");
         while (!cua.isEmpty()){
@@ -84,8 +84,8 @@ public class Main {
         }
 
         //colecció Conjunts
-        Producte m = new Movil(1,"Samsung", 5);
-        Producte o = new Movil(2,"Lg", 2);
+        Producte m = new Movil(1,"Samsung", 5, "Pepe");
+        Producte o = new Movil(2,"Lg", 2, "Anna");
 
         HashSet<Producte> conjunt = new HashSet<Producte>();
         conjunt.add(m);
@@ -100,14 +100,29 @@ public class Main {
 
         //Taules dispersio
         System.out.println("--Filtratge dates devolucio--");
-        Producte s = new Movil(1,"Samsung", 5);
-        Producte t = new Movil(2,"Lg", 2);
+        Producte s = new Movil(1,"Samsung", 5, "Pepe");
+        Producte t = new Movil(2,"Lg", 2, "Anna");
         Map taulaHash = new HashMap<Producte,String>();
         taulaHash.put(s,"La data de devolució d'aquest dispositiu és: 02-03-2018 ");
         taulaHash.put(t,"La data de devolució d'aquest dispositiu és: 12-07-2018");
 
         String descripcio = (String) taulaHash.get(s);
         System.out.println(descripcio);
+
+        //Us de interficie en una coleccio
+        ArrayList<Treballador> treballadors = new ArrayList<Treballador>();
+        treballadors.add(new Empleat("Hector", "Zeto", "27164902Q", "Calle 123",689493,1000.101));
+        treballadors.add(new Empleat("Aaron", "Yolo", "63038890F", "Calle 567", 689493,1000.101));
+        treballadors.add(new Empleat("Albert", "Navas", "34386054L", "Calle 556",689493,1000.101));
+        treballadors.add(new Empleat("Pepe", "Blázquez", "05760496P", "Calle 111",689493,1000.101));
+        treballadors.add(new Empleat("Pepe", "Vázquez", "07107542J", "Calle 116",689493,1000.101));
+
+        Collections.sort(treballadors);
+
+        System.out.println(" Ordenar els treballadors per el cognom");
+        for(int i=0; i<treballadors.size(); i++)
+            System.out.println(treballadors.get(i));
+
 
     }// cerrar main
 

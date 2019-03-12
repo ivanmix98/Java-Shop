@@ -1,14 +1,16 @@
 package projecte;
-import java.util.*;
-public class Movil extends Producte{
-    private int mesura;
 
-    public Movil ( int id, String nom, int mesura){
+public class Movil extends Producte {
+    private  int mesura;
+    private  String nomMovil;
+
+    public Movil ( int id, String nom, int mesura, String nomMovil){
         super(id, nom);
         this.mesura = mesura;
+        this.nomMovil = nomMovil;
     }
 
-    public int getMesura() {
+    public  int getMesura() {
         return mesura;
     }
 
@@ -16,5 +18,12 @@ public class Movil extends Producte{
         this.mesura = mesura;
     }
 
+    public  String getNomMovil() {
+        return nomMovil;
+    }
+
+    public void setNomMovil(String nomMovil) {
+        this.nomMovil = nomMovil;
+    }
 
 }

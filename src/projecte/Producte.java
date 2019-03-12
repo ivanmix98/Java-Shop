@@ -24,4 +24,6 @@ public abstract class Producte {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+
 }

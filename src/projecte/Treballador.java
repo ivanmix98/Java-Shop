@@ -19,7 +19,6 @@ public abstract class Treballador implements IPersona, Comparable<Treballador> {
     public int compareTo(Treballador a) {
         return this.cognom.compareTo(a.cognom);
     }
-
     public static void diadepago(){
         Calendar fecha1 = Calendar.getInstance();
         fecha1.set(Calendar.DATE, 25);
