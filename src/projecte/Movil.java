@@ -1,6 +1,6 @@
 package projecte;
 
-public class Movil extends Producte {
+public class Movil extends Producte implements IVoluminos {
     private  int mesura;
     private  String nomMovil;
 
@@ -26,4 +26,10 @@ public class Movil extends Producte {
         this.nomMovil = nomMovil;
     }
 
+    public void Gran(){
+         System.out.println("Aquest movil es més gran que la mitjana");
+    }
+    public void Petit(){
+        System.out.println("Aquest movil es més petit que la mitjana");
+    }
 }

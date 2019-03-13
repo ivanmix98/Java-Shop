@@ -125,6 +125,12 @@ public class Main {
         for(int i=0; i<treballadors.size(); i++)
             System.out.println(treballadors.get(i));
 
+        //herencia multiple
+        System.out.println(" Implementant herencia multiple");
+        Producte herencia1 = new Movil(1,"Samsung", 5, "Pepe");
+        Producte herencia2 = new Movil(1,"Lg", 1, "Juan");
+        ((Movil) herencia1).Gran();
+        ((Movil) herencia1).Petit();
 
     }// cerrar main
 
