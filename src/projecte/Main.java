@@ -42,6 +42,9 @@ public class Main {
         System.out.println("En el contracte el minim a cobrar es: "+((Gerent) g1).getSalaribase());
         System.out.println("En el contracte el minim a cobrar es: "+((Gerent) g2).getSalaribase());
 
+        //us de metode diferit
+        System.out.println(g1.toString());
+
         //utilitzant classe interna
         Televisio objetoExterno = new Televisio(3,"pantalla1",2,500);
         Televisio.Pantalla objetoInterno = objetoExterno.new Pantalla();
@@ -71,8 +74,8 @@ public class Main {
         while (!pila.isEmpty()){
             System.out.println(pila.pop().getNom());
         }
-        //colecció Cues
 
+        //colecció Cues
         Queue<Producte> cua = new LinkedList<Producte>(){};
         cua.add(new Movil(1,"Samsung", 5, "Pepe"));
         cua.add(new Movil(2,"iPhone", 3, "Anna"));
@@ -104,6 +107,7 @@ public class Main {
         System.out.println("--Filtratge dates devolucio--");
         Producte s = new Movil(1,"Samsung", 5, "Pepe");
         Producte t = new Movil(2,"Lg", 2, "Anna");
+
         Map taulaHash = new HashMap<Producte,String>();
         taulaHash.put(s,"La data de devolució d'aquest dispositiu és: 02-03-2018 ");
         taulaHash.put(t,"La data de devolució d'aquest dispositiu és: 12-07-2018");
@@ -111,7 +115,7 @@ public class Main {
         String descripcio = (String) taulaHash.get(s);
         System.out.println(descripcio);
 
-        //Us de interficie en una coleccio
+        //Us de ""interficie""" en una coleccio(Comparable)
         ArrayList<Treballador> treballadors = new ArrayList<Treballador>();
         treballadors.add(new Empleat("Hector", "Zeto", "27164902Q", "Calle 123",689493,1000.101));
         treballadors.add(new Empleat("Aaron", "Yolo", "63038890F", "Calle 567", 689493,1000.101));
@@ -131,6 +135,18 @@ public class Main {
         Producte herencia2 = new Movil(1,"Lg", 1, "Juan");
         ((Movil) herencia1).Gran();
         ((Movil) herencia1).Petit();
+
+        //us de Comparator
+        System.out.println("Interficie Comparator");
+        Empleat e1 = new Empleat("Pepe", null, null, null, 0, 0);
+        Empleat e2 = new Empleat("Pepe", null, null, null, 0, 0);
+
+        System.out.println(e1.equals(e2));
+
+        Empleat e3 = new Empleat("Maria", null, null, null, 0, 0);
+        Empleat e4 = new Empleat("Carla", null, null, null, 0, 0);
+
+        System.out.println(e3.equals(e4));
 
     }// cerrar main
 
