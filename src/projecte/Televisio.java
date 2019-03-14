@@ -2,7 +2,7 @@ package projecte;
 
 public class Televisio extends Producte {
     private int quantitat;
-    private int preu;
+    private int any;
      int resolucio = 1080;
 
     public class Pantalla {
@@ -11,10 +11,10 @@ public class Televisio extends Producte {
         }
     }
 
-    public Televisio ( int id, String nom, int quantitat, int preu){
-        super(id, nom);
+    public Televisio ( int id, String nom, double preu, int quantitat, int any){
+        super(id, nom,preu);
         this.quantitat = quantitat;
-        this.preu = preu;
+        this.any = any;
 
     }
 
@@ -22,16 +22,20 @@ public class Televisio extends Producte {
         return quantitat;
     }
 
-    public int getPreu() {
-        return preu;
+    public int getAny() {
+        return any;
     }
 
     public void setQuantitat(int quantitat) {
         this.quantitat = quantitat;
     }
 
-    public void setPreu(int preu) {
-        this.preu = preu;
+    public void setAny(int any) {
+        this.any = any;
+    }
+
+    public String toString(){
+        return "ID Producte: " + this.getId() + " Nom producte: " + this.getNom()  + " Quantitat: " + this.getQuantitat() + " Any:" + this.getAny() + " Preu:" + this.getPreu();
     }
 
 

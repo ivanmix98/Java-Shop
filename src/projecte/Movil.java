@@ -2,12 +2,12 @@ package projecte;
 
 public class Movil extends Producte implements IVoluminos {
     private  int mesura;
-    private  String nomMovil;
+    private  String versio;
 
-    public Movil ( int id, String nom, int mesura, String nomMovil){
-        super(id, nom);
+    public Movil ( int id, String nom, double preu, int mesura, String versio){
+        super(id, nom, preu);
         this.mesura = mesura;
-        this.nomMovil = nomMovil;
+        this.versio = versio;
     }
 
     public  int getMesura() {
@@ -18,12 +18,12 @@ public class Movil extends Producte implements IVoluminos {
         this.mesura = mesura;
     }
 
-    public  String getNomMovil() {
-        return nomMovil;
+    public  String getVersio() {
+        return versio;
     }
 
-    public void setNomMovil(String nomMovil) {
-        this.nomMovil = nomMovil;
+    public void setVersio(String versio) {
+        this.versio = versio;
     }
 
     public void Gran(){
@@ -31,5 +31,9 @@ public class Movil extends Producte implements IVoluminos {
     }
     public void Petit(){
         System.out.println("Aquest movil es més petit que la mitjana");
+    }
+
+    public String toString(){
+        return "\n" + this.getClass().getSimpleName() + "\n ID Producte: " + this.getId() + "\n Nom producte: " + this.getNom()  + "\n Mesura: " + this.getMesura() + "\n Versió:" + this.getVersio() + "\n Preu: " + this.getPreu() + "€";
     }
 }
