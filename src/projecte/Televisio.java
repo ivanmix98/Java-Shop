@@ -7,7 +7,7 @@ public class Televisio extends Producte {
 
     public class Pantalla {
         public void mostrarDimensio(){
-            System.out.println("qualitat de la pantalla: "+ resolucio+"p" );
+            System.out.println("En stock: " + resolucio+"p" );
         }
     }
 
@@ -35,7 +35,7 @@ public class Televisio extends Producte {
     }
 
     public String toString(){
-        return "ID Producte: " + this.getId() + " Nom producte: " + this.getNom()  + " Quantitat: " + this.getQuantitat() + " Any:" + this.getAny() + " Preu:" + this.getPreu();
+        return "\n" + this.getClass().getSimpleName() + "\n ID Producte: " + this.getId() + "\n Nom producte: " + this.getNom()  + "\n Quantitat: " + this.getQuantitat() + "\n Any:" + this.getAny() + "\n Preu:" + this.getPreu() + "€";
     }
 
 

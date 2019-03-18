@@ -27,10 +27,10 @@ public class Movil extends Producte implements IVoluminos {
     }
 
     public void Gran(){
-         System.out.println("Aquest movil es més gran que la mitjana");
+         System.out.println("Aquest " + getNom() + " amb mesura " + getMesura() + " es més gran que la mitjana");
     }
     public void Petit(){
-        System.out.println("Aquest movil es més petit que la mitjana");
+        System.out.println("Aquest " + getNom() + " amb mesura " + getMesura() +  " es més petit que la mitjana");
     }
 
     public String toString(){
