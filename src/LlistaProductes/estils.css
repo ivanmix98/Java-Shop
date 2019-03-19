@@ -1,0 +1,49 @@
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,12%);
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}

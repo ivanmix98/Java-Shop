@@ -53,25 +53,28 @@ public class Main {
 
             int gestio;
             Scanner scan = new Scanner(System.in);
-            System.out.println("Hola director, sistema iniciat... Que vols consultar?:");
-            System.out.println("1 - Llista de productes en stock");
-            System.out.println("2 - Oferta de la setmana");
-            System.out.println("3 - Llistat de gerents");
-            System.out.println("4 - Llistat d' empleats");
-            System.out.println("5 - Llistat de treballadors");
-            System.out.println("6 - Contracte gerents");
-            System.out.println("7 - Pagar als gerents");
-            System.out.println("8 - Resolucions de TV disponibles");
-            System.out.println("9 - Llista clients amb tarjeta descompte");
-            System.out.println("10 - Marques de PC més venudes avui");
-            System.out.println("11 - Marques de Mòvil més venudes avui");
-            System.out.println("12 - Llista dispositius defectuosos");
-            System.out.println("13 - Llista de pròxims dispositius disponibles");
-            System.out.println("14 - Pagar als treballadors");
-            System.out.println("15 - Mòvil min/max");
-        System.out.println("16 - Llista dispositius defectuosos/devolució");
+        System.out.println("Hola director, sistema iniciat... Que vols consultar?:");
+        System.out.println("1 - Llista de productes en stock");
+        System.out.println("2 - Oferta de la setmana");
+        System.out.println("3 - Llistat de gerents");
+        System.out.println("4 - Llistat d' empleats");
+        System.out.println("5 - Llistat de treballadors");
+        System.out.println("6 - Contracte gerents");
+        System.out.println("7 - Pagar als gerents");
+        System.out.println("8 - Resolucions de TV disponibles");
+        System.out.println("9 - Llista clients amb tarjeta descompte");
+        System.out.println("10 - Marques de PC més venudes avui");
+        System.out.println("11 - Marques de Mòvil més venudes avui");
+        System.out.println("12 - Llista dispositius defectuosos");
+        System.out.println("13 - Llista de pròxims dispositius disponibles");
+        System.out.println("14 - Pagar als treballadors");
+        System.out.println("15 - Mòvil min/max");
+        System.out.println("16 - Comparable");
+        System.out.println("18 - Tancar sistema");
             gestio = scan.nextInt();
-            switch(gestio){
+
+        while (gestio<18) {
+            switch (gestio) {
 
                 case 1:
                     //productes
@@ -89,52 +92,75 @@ public class Main {
                     System.out.println(t);
                     System.out.println(herencia1);
                     System.out.println(herencia2);
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 2:
                     //us de classe generica
-                    Caixa<String , Integer> caixa= new Caixa<String, Integer>();
+                    Caixa<String, Integer> caixa = new Caixa<String, Integer>();
                     caixa.add(new String("Teclat logitech"), new Integer(25));
 
                     System.out.printf("Producte: %s\n", caixa.getObjeto());
                     System.out.printf("Preu: %s\n", caixa.getObjeto2());
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 3:
                     //USO DE LAMBDAS
                     Treballadors gerents;
-                    gerents=()->2;
-                    System.out.println("Gerents: "+gerents.quantitat() + "\n Arnau Elias \n Ivan Fontclara ");
+                    gerents = () -> 2;
+                    System.out.println("Gerents: " + gerents.quantitat() + "\n Arnau Elias \n Ivan Fontclara ");
 
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
 
                     break;
                 case 4:
                     //USO DE LAMBDAS
                     Treballadors empleats;
-                    empleats=()->5;
-                    System.out.println("Empleats actuals: "+empleats.quantitat() + "\n Hector Zeto \n Aaron Yolo \n Willy Navas \n Pepe Blàzquez  \n Pepe Vazquez ");
+                    empleats = () -> 5;
+                    System.out.println("Empleats actuals: " + empleats.quantitat() + "\n Hector Zeto \n Aaron Yolo \n Willy Navas \n Pepe Blàzquez  \n Pepe Vazquez ");
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 5:
                     //USO DE LAMBDAS
-                    TotalTreballadors totals= (g,e)-> (g+e);
-                    System.out.println("Treballadors totals: "+totals.quantitat(2,5) + "\n Arnau Elias \n Ivan Fontclara \n Hector Zeto \n Aaron Yolo \n Willy Navas \n Pepe Blàzquez  \n Pepe Vazquez ");
+                    TotalTreballadors totals = (g, e) -> (g + e);
+                    System.out.println("Treballadors totals: " + totals.quantitat(2, 5) + "\n Arnau Elias \n Ivan Fontclara \n Hector Zeto \n Aaron Yolo \n Willy Navas \n Pepe Blàzquez  \n Pepe Vazquez ");
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 6:
                     //treballadors mostrant atribut estatic i metode
-                    System.out.println("En el contracte de " + g1.getNom() + " " + g1.getCognom() + " el minim a cobrar es: "+((Gerent) g1).getSalaribase());
-                    System.out.println("En el contracte de " + g2.getNom() + " " + g2.getCognom() + " el minim a cobrar es: "+((Gerent) g2).getSalaribase());
+                    System.out.println("En el contracte de " + g1.getNom() + " " + g1.getCognom() + " el minim a cobrar es: " + ((Gerent) g1).getSalaribase());
+                    System.out.println("En el contracte de " + g2.getNom() + " " + g2.getCognom() + " el minim a cobrar es: " + ((Gerent) g2).getSalaribase());
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 7:
                     //us de metode diferit
                     System.out.println(g1.toString());
                     System.out.println(g2.toString());
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 8:
                     //utilitzant classe interna
                     Televisio.Pantalla objetoInterno = objetoExterno.new Pantalla();
                     objetoInterno.mostrarDimensio();
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 9:
                     //colecció llistes
-                    List<Client> clients =new ArrayList<Client>();
+                    List<Client> clients = new ArrayList<Client>();
                     clients.add(c1);
                     clients.add(c2);
                     clients.add(c3);
@@ -147,9 +173,12 @@ public class Main {
                     clients.add(c10);
                     System.out.println("--Llista clients amb tarjeta descompte--");
                     System.out.println("--Nom || Cognom || Data de alta de la tarjeta--");
-                    for(int x=0;x<clients.size();x++) {
-                    System.out.println("  " + clients.get(x).getNom() + "    " + clients.get(x).getCognom() + "    " + clients.get(x).getFechacompra());
+                    for (int x = 0; x < clients.size(); x++) {
+                        System.out.println("  " + clients.get(x).getNom() + "    " + clients.get(x).getCognom() + "    " + clients.get(x).getFechacompra());
                     }
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 10:
                     //colecció Piles
@@ -158,13 +187,17 @@ public class Main {
                     pila.push(pila2);
                     Date today = Calendar.getInstance().getTime();
                     System.out.println("\n--Llista marques més venudes avui (" + today + ") --");
-                    while (!pila.isEmpty()){
+                    while (!pila.isEmpty()) {
                         System.out.println(pila.pop().getNom());
                     }
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 11:
                     //colecció Cues
-                    Queue<Producte> cua = new LinkedList<Producte>(){};
+                    Queue<Producte> cua = new LinkedList<Producte>() {
+                    };
 
                     cua.add(cua1);
                     cua.add(cua2);
@@ -172,10 +205,13 @@ public class Main {
                     cua.add(cua4);
                     Date today2 = Calendar.getInstance().getTime();
                     System.out.println("--Llista movils més venuts avui (" + today2 + ") --");
-                    while (!cua.isEmpty()){
+                    while (!cua.isEmpty()) {
                         Producte a = cua.remove();
-                        System.out.println(a.getId()+ " "+ a.getNom());
+                        System.out.println(a.getId() + " " + a.getNom());
                     }
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 12:
                     //colecció Conjunts
@@ -186,18 +222,21 @@ public class Main {
                     conjunt.add(o);
 
                     System.out.println("--Llista de dispositius defectuosos--");
-                    for(Iterator it = conjunt.iterator(); it.hasNext();){
-                        Producte x = (Movil)it.next();
-                        System.out.println(x.getId()+" "+ x.getNom() + " " +((Movil) x).getVersio() );
+                    for (Iterator it = conjunt.iterator(); it.hasNext(); ) {
+                        Producte x = (Movil) it.next();
+                        System.out.println(x.getId() + " " + x.getNom() + " " + ((Movil) x).getVersio());
                     }
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 13:
                     //Taules dispersio
                     System.out.println("--Futurs productes--");
 
-                    Map taulaHash = new HashMap<Producte,String>();
-                    taulaHash.put(s,"La data de llançament del dispositiu " + " " + s.getNom() + " " + ((Movil) s).getVersio() + " dispositiu és: 02-03-2020 ");
-                    taulaHash.put(t,"La data de llançament del dispositiu " + " " + t.getNom() + " " + ((Movil) t).getVersio() + "  és: 12-07-2020");
+                    Map taulaHash = new HashMap<Producte, String>();
+                    taulaHash.put(s, "La data de llançament del dispositiu " + " " + s.getNom() + " " + ((Movil) s).getVersio() + " dispositiu és: 02-03-2020 ");
+                    taulaHash.put(t, "La data de llançament del dispositiu " + " " + t.getNom() + " " + ((Movil) t).getVersio() + "  és: 12-07-2020");
 
                     String descripcio = (String) taulaHash.get(s);
                     String descripcio2 = (String) taulaHash.get(t);
@@ -205,6 +244,9 @@ public class Main {
 
                     System.out.println(descripcio);
                     System.out.println(descripcio2);
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 14:
                     //Us de ""interficie""" en una coleccio(Comparable)
@@ -218,8 +260,11 @@ public class Main {
 
                     Collections.sort(treballadors);
 
-                    for(int i=0; i<treballadors.size(); i++)
+                    for (int i = 0; i < treballadors.size(); i++)
                         System.out.println(treballadors.get(i));
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 15:
                     //herencia multiple
@@ -227,18 +272,45 @@ public class Main {
 
                     ((Movil) herencia1).Gran();
                     ((Movil) herencia2).Petit();
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
                 case 16:
                     //us de Comparator
                     System.out.println("Interficie Comparator");
                     System.out.println(e1.equals(e2));
                     System.out.println(e3.equals(e4));
+
+                    System.out.println("");
+                    System.out.println("17 - Anar enrere");
                     break;
 
 
+                case 17:
+                    System.out.println("Hola director, sistema iniciat... Que vols consultar?:");
+                    System.out.println("1 - Llista de productes en stock");
+                    System.out.println("2 - Oferta de la setmana");
+                    System.out.println("3 - Llistat de gerents");
+                    System.out.println("4 - Llistat d' empleats");
+                    System.out.println("5 - Llistat de treballadors");
+                    System.out.println("6 - Contracte gerents");
+                    System.out.println("7 - Pagar als gerents");
+                    System.out.println("8 - Resolucions de TV disponibles");
+                    System.out.println("9 - Llista clients amb tarjeta descompte");
+                    System.out.println("10 - Marques de PC més venudes avui");
+                    System.out.println("11 - Marques de Mòvil més venudes avui");
+                    System.out.println("12 - Llista dispositius defectuosos");
+                    System.out.println("13 - Llista de pròxims dispositius disponibles");
+                    System.out.println("14 - Pagar als treballadors");
+                    System.out.println("15 - Mòvil min/max");
+                    System.out.println("16 - Comparable");
+                    System.out.println("18 - Tancar programa");
+                    break;
             }
 
-
+            gestio = scan.nextInt();
+        }
 
 
 
